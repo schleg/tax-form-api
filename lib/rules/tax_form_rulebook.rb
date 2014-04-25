@@ -9,7 +9,7 @@ module Rules
           m.itemizing_deductions == true
         ] { |v|
 
-          assert TaxForm.create(preparation_id: v[:id], name: 'F1040')
+          assert TaxForm.add_to_preparation(preparation_id: v[:id], name: 'F1040')
         }
 
       rule :F1040EZ, { priority: 100 },
@@ -21,7 +21,7 @@ module Rules
           m.itemizing_deductions == false
         ] { |v|
 
-          assert TaxForm.create(preparation_id: v[:id], name: 'F1040EZ')
+          assert TaxForm.add_to_preparation(preparation_id: v[:id], name: 'F1040EZ')
         }
     end
   end

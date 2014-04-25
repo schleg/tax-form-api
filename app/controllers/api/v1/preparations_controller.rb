@@ -12,6 +12,11 @@ module Api
         preparation = Preparation.create params[:preparation]
         render json: preparation
       end
+
+      def show
+        preparation = Preparation.find_by_id params[:id]
+        render json: preparation
+      end
     end
   end
 end

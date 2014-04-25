@@ -3,17 +3,13 @@ class Preparation < ActiveRecord::Base
   require 'ruleby'
   include Ruleby
 
+  require 'rules'
+  include Rules
+
   has_many :tax_forms
 
-  attr_accessor \
-    :age,
-    :spouse_age,
-    :taxable_income,
-    :interest_income,
-    :income_source_approved,
-    :itemizing_deductions
-
   def run_form_rules
+    tax_forms.destroy_all
     engine :engine do |e|
       Rules::TaxFormRulebook.new e do |r|
         r.rules
