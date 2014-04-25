@@ -28,6 +28,7 @@ group :test, :api_test do
   gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'vcr'
+  gem 'webmock'
 end
 
 group :development, :test, :api_test do
