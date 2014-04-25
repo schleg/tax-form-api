@@ -3,6 +3,14 @@ require 'rspec_api_documentation/dsl'
 
 resource 'Preparations' do
 
+  let!(:user) { FactoryGirl.create :user_with_auth_token }
+
+  before do
+    header 'Authorization', 
+      ActionController::HttpAuthentication::Token.encode_credentials(
+        user.authentication_token.token)
+  end
+
   get '/api/preparations' do
 
     before do
