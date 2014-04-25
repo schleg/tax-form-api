@@ -18,6 +18,7 @@ gem 'dotenv-rails'
 gem 'state_machine'
 gem 'values'
 gem 'versionist'
+gem 'ruleby'
 
 group :development do
   gem 'rails-erd'

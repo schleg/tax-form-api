@@ -160,6 +160,7 @@ GEM
       rspec (>= 2.14.0)
     ruby-graphviz (1.0.9)
     ruby-hmac (0.4.0)
+    ruleby (0.8)
     safe_yaml (1.0.1)
     simplecov (0.8.2)
       docile (~> 1.1.0)
@@ -229,6 +230,7 @@ DEPENDENCIES
   rails-erd
   rspec-rails
   rspec_api_documentation
+  ruleby
   simplecov
   simplecov-rcov
   sqlite3
