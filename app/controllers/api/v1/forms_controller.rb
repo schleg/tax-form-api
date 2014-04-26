@@ -10,7 +10,7 @@ module Api
           if preparation.tax_forms.count == 0
             preparation.run_form_rules
           end
-          respond_with json: preparation.tax_forms
+          render json: preparation.tax_forms
         end
       end
     end
