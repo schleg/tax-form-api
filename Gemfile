@@ -24,15 +24,14 @@ group :development do
   gem 'rails-erd'
 end
 
-group :test, :api_test do
-  gem 'sqlite3'
+group :test do
   gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'vcr'
   gem 'webmock'
 end
 
-group :development, :test, :api_test do
+group :development, :test do
   gem 'rspec-rails'
   gem 'rspec_api_documentation'
   gem 'database_cleaner'
